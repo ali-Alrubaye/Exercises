@@ -13,6 +13,7 @@ namespace Exercise9
 
             var myLogger = new Logger();
 
+
             var store = new Employee("ali","alr","123344","dddd");
            
             Console.WriteLine(myLogger.GetAllEmployee());
