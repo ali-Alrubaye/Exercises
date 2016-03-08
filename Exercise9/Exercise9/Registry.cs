@@ -6,31 +6,58 @@ using System.Threading.Tasks;
 
 namespace Exercise9
 {
-    class Registry
+    public class Registry
     {
-        public List<Employee> MyEmp { get; private set; }
+        public List<Employee> employeesList;
+        private Logger _logger;
 
         //Constructor
         public Registry()
         {
-            MyEmp = new List<Employee>();
+            employeesList = new List<Employee>();
         }
 
-        public void AddEmployee(Employee employee)
+        public Registry(Logger logger) : this()
         {
-            MyEmp.Add(employee);
-            
+            _logger = logger;
         }
-        public void RemoveEmployee(Employee employe)
+
+        public void AddEmployee(Employee newEmployee)
         {
-            MyEmp.Remove(employe);
+            employeesList.Add(newEmployee);
+           
         }
-        public int EmployeeInStore
+
+        public List<Employee> GetAllEmp()
+        { return employeesList; }
+
+        public void RemoveEmployee(string ssn)
         {
-        get{ return MyEmp.Count; }
+
+            foreach (var item in employeesList)
+            {
+                if (item.Ssn == ssn)
+                {
+                    employeesList.Remove(item);
+                    _logger.Log("Removing employee from list:" + item);
+                    break;
+                }
+            }
         }
-         public List<Employee> GetAllEmployee()
-        { return MyEmp ;
+        public override string ToString()
+        {
+            if (!employeesList.Any())
+            {
+                return "Registry contains no employees.";
+            }
+
+            string result = "";
+            foreach (var employee in employeesList)
+            {
+                result += employee.ToString();
+            }
+            return result;
         }
+
     }
 }

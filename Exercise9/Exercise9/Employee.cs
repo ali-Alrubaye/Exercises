@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise9
 {
-    class Employee
+    public class Employee
     {
         //  properties 
         public string FirstName { get; set; }
@@ -23,11 +23,20 @@ namespace Exercise9
             Wage= wage;
         }
 
-       
-
-        public string Getinfo()
+        public void PrintEmployee()
         {
-            return FirstName+ LastName+Ssn+Wage;
+
+            Console.WriteLine($"{FirstName} {LastName}{Ssn}{Wage}");
+        }
+        public Employee(string ssn)
+        {
+            Ssn = ssn;
+        }
+
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}{Ssn}{Wage}";
         }
     }
 }
