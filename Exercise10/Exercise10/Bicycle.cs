@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace Exercise10
 {
-    public class Bicycle : Vehicle
+    public class Bicycle: Vehicle
     {
         //Field
-        public string Colour;
+        private string colourOfBicycle;
         
+        public Bicycle()
+        {
+            addVehicle("bicycle");
+        }
         //Methods
         public string GetColour()
         {
-            return  Colour;
+            return  colourOfBicycle;
+
         }
     }
 }

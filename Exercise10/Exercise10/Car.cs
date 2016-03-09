@@ -6,46 +6,42 @@ using System.Threading.Tasks;
 
 namespace Exercise10
 {
-    public class Car:Vehicle
+    public class Car: Vehicle
     {
         // Fields
+        //private string manufacturar;
+        //private string year;
+        //private string regNumber;
+        private bool engineIsRunning;
         
-        private bool EngineIsRunning;
-       
-
         //Inherited class constructor :
-        public Car(string model, string manufacturar, string year, string regNumber,bool engineIsRunning) : base( model,manufacturar,year,regNumber)
+        public Car()
         {
-            this.EngineIsRunning = false;
+            engineIsRunning = false;
+            addVehicle("car");
+            //this.Manufacturar = manufacturar;
+            //this.Year = year;
+            //this.RegNumber = regNumber;
         }
-        public Car ()
-        { }
+
         public bool StartEngine()
         {
             // If the Engine is already Start, the action fails
-            if (EngineIsRunning)
+            if (engineIsRunning)
                 return false;
-            EngineIsRunning = true;
+            engineIsRunning = true;
             return true;
         }
         // If the Engine is already stop, the action fails
         public bool StopEngine()
         {
-            if (!EngineIsRunning)
+            if (!engineIsRunning)
                 return false;
-            EngineIsRunning = false;
+            engineIsRunning = false;
             return true;
         }
 
-        //public void UpdateYear(string newYear)
-        //{
-        //    this.Year = newYear;
-        //}
-
-        public string GetCarInfo()
-        {
-            return RegNumber + ": " + Model;
-        }
+       
 
     }
 }
