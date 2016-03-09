@@ -9,32 +9,24 @@ namespace Exercise10
       public class Vehicle
     {
         // Fields
-        public string Model;
-        public string Manufacturar;
-        public string Year;
-        public string RegNumber;
+        private string _vehicleType;
+        
         
 
         //Constructors
-        public Vehicle()
-        { }
-        public Vehicle (string model, string manufacturar,string year,string regNumber)
+              
+        public void addVehicle(string vehicleType)
         {
-            this.Model = model;
-            this.Manufacturar = manufacturar;
-            this.Year = year;
-            this.RegNumber = regNumber;
+            _vehicleType = vehicleType;
+           
         }
         //Methods
         public string DescribeVehicle ()
         {
-            return "This vehicle is a " + Model + ", " + RegNumber + ", " + Manufacturar + " ," + Year;
+            return "This vehicle is a " + _vehicleType;
         }
         
 
-        //public string GetVehicleInfo()
-        //{
-        //    return RegNumber + ", " + Manufacturar + " ," + Year;
-        //}
+       
     }
 }
