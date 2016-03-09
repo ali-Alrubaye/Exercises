@@ -12,17 +12,14 @@ namespace Exercise10
         {
 
             
-            var MyVehicle = new VehicleData();
+            var vehicleData = new VehicleData();
+           var car = new Car();
+            var bicycle = new Bicycle();
             
-            var myCar = new Car();
-            myCar.Model = "BMV";
-            myCar.Manufacturar = "Swd";
-            myCar.RegNumber = "AAA123";
-            myCar.Year = "2016";
-          
-            MyVehicle.PrintVehicle(myCar);
-
-         }
+            vehicleData.PrintVehicle(car);
+            vehicleData.PrintVehicle(bicycle);
+            
+        }
     }
     
 }
