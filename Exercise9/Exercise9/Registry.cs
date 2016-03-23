@@ -54,7 +54,7 @@ namespace Exercise9
             string result = "";
             foreach (var employee in employeesList)
             {
-                result += employee.ToString();
+                result += employee.ToString()+Environment.NewLine;
             }
             return result;
         }

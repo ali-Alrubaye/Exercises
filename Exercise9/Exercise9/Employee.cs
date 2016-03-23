@@ -27,7 +27,7 @@ namespace Exercise9
             public void PrintEmployee()
             {
 
-                Console.WriteLine($"{FirstName} {LastName}{Ssn}{Wage}");
+                Console.WriteLine($"{FirstName}  {LastName} {Ssn} {Wage}");
             }
             public Employee(string ssn)
             {
@@ -37,7 +37,7 @@ namespace Exercise9
 
             public override string ToString()
             {
-                return $"{FirstName} {LastName}{Ssn}{Wage}";
+                return $"{FirstName}\t{LastName}\t{Ssn}\t{Wage}";
             }
         
     }

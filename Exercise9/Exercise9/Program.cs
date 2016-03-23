@@ -17,6 +17,9 @@ namespace Exercise9
 
 
             registry.AddEmployee(new Employee("Kalle", "Anka", "123", "456"));
+            registry.AddEmployee(new Employee("Kalle02", "Anka02", "321", "987"));
+
+
             while (run)
             {
 
