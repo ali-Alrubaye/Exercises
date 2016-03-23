@@ -13,26 +13,26 @@ namespace Exercise9
             var logger = new Logger();
             var registry = new Registry(logger);
             bool run = true;
-            
 
 
-            registry.AddEmployee(new Employee("Kalle","Anka","123","456"));
+
+            registry.AddEmployee(new Employee("Kalle", "Anka", "123", "456"));
             while (run)
             {
 
-            Console.WriteLine("1. Add employee"); 
-            Console.WriteLine("2. Remove employee");
-            Console.WriteLine("3. Print entire registry"); 
-            Console.WriteLine("4. Exit");
-            Console.WriteLine("Enter choice:");
-            var menyChoice = int.Parse(Console.ReadLine());
-               
-            // Collect user input
-             switch (menyChoice)
+                Console.WriteLine("1. Add employee");
+                Console.WriteLine("2. Remove employee");
+                Console.WriteLine("3. Print entire registry");
+                Console.WriteLine("4. Exit");
+                Console.WriteLine("Enter choice:");
+                var menyChoice = int.Parse(Console.ReadLine());
+
+                // Collect user input
+                switch (menyChoice)
                 {
                     case 1:
-                      Console.WriteLine("Enter FirstName:");
-                        string firstName= Console.ReadLine();
+                        Console.WriteLine("Enter FirstName:");
+                        string firstName = Console.ReadLine();
                         Console.WriteLine("Enter LastName");
                         string lastName = Console.ReadLine();
                         Console.WriteLine("Enter Ssn");
@@ -50,7 +50,7 @@ namespace Exercise9
                         registry.RemoveEmployee(inputSsn);
                         break;
                     case 3:
-                        Console.WriteLine( registry.ToString());
+                        Console.WriteLine(registry.ToString());
                         break;
                     case 4:
                         run = false;
@@ -58,8 +58,7 @@ namespace Exercise9
                 }
                 Console.ReadKey();
             }
-        
+
         }
-    
     }
 }

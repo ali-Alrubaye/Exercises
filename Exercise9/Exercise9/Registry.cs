@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise9
 {
-    public class Registry
+    class Registry
     {
         public List<Employee> employeesList;
         private Logger _logger;
@@ -25,7 +25,7 @@ namespace Exercise9
         public void AddEmployee(Employee newEmployee)
         {
             employeesList.Add(newEmployee);
-           
+
         }
 
         public List<Employee> GetAllEmp()
@@ -58,6 +58,5 @@ namespace Exercise9
             }
             return result;
         }
-
     }
 }

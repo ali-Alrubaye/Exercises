@@ -6,37 +6,39 @@ using System.Threading.Tasks;
 
 namespace Exercise9
 {
-    public class Employee
+    class Employee
     {
-        //  properties 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Ssn { get; set; }
-        public string Wage { get; set; }
+        
+            //  properties 
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Ssn { get; set; }
+            public string Wage { get; set; }
 
-        //Constructor 
-        public Employee(string firstName, string lastName, string ssn, string wage)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            Ssn= ssn;
-            Wage= wage;
-        }
+            //Constructor 
+            public Employee(string firstName, string lastName, string ssn, string wage)
+            {
+                FirstName = firstName;
+                LastName = lastName;
+                Ssn = ssn;
+                Wage = wage;
+            }
 
-        public void PrintEmployee()
-        {
+            public void PrintEmployee()
+            {
 
-            Console.WriteLine($"{FirstName} {LastName}{Ssn}{Wage}");
-        }
-        public Employee(string ssn)
-        {
-            Ssn = ssn;
-        }
+                Console.WriteLine($"{FirstName} {LastName}{Ssn}{Wage}");
+            }
+            public Employee(string ssn)
+            {
+                Ssn = ssn;
+            }
 
 
-        public override string ToString()
-        {
-            return $"{FirstName} {LastName}{Ssn}{Wage}";
-        }
+            public override string ToString()
+            {
+                return $"{FirstName} {LastName}{Ssn}{Wage}";
+            }
+        
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exercise9
 {
-    public class Logger
+    class Logger
     {
         private List<string> employe;
         public List<string> LogPosts { get; set; }
-        
+
         //Constructor
         public Logger()
         {
@@ -20,9 +20,7 @@ namespace Exercise9
         public void Log(string employe)
         {
             LogPosts.Add(employe);
-            
-        }
-    
 
+        }
     }
 }
